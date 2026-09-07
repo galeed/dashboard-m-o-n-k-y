@@ -160,7 +160,7 @@
     @apply border-border outline-ring/50 overscroll-none;
   }
   body {
-    @apply bg-muted text-foreground font-mono;
+    @apply bg-background text-foreground font-mono;
   }
 }
 
