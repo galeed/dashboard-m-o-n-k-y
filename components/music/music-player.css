@@ -1,0 +1,10 @@
+@keyframes spectrum {
+  0%, 100% { transform: scaleY(.52); opacity: .42; }
+  50% { transform: scaleY(1); opacity: .95; }
+}
+
+.animate-spectrum { animation: spectrum 1.1s ease-in-out infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spectrum { animation: none; }
+}
