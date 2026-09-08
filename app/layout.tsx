@@ -19,11 +19,11 @@ const isV0 = process.env["VERCEL_URL"]?.includes("vusercontent.net") ?? false;
 
 export const metadata: Metadata = {
   title: {
-    template: "%s – M.O.N.K.Y OS",
-    default: "M.O.N.K.Y OS",
+    template: "%s – Meow Audio App 2",
+    default: "Meow Audio App 2",
   },
   description:
-    "The ultimate OS for rebels. Making the web for brave individuals.",
+    "A local-first lossless music player for your personal library.",
     generator: 'v0.app'
 };
 
