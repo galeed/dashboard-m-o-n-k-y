@@ -8,3 +8,16 @@
 @media (prefers-reduced-motion: reduce) {
   .animate-spectrum { animation: none; }
 }
+
+[role="dialog"] {
+  max-height: min(78vh, 38rem);
+  overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  [role="dialog"] {
+    position: fixed;
+    inset: auto 1rem 1rem;
+    width: auto;
+  }
+}
