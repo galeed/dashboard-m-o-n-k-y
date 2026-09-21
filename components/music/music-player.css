@@ -21,3 +21,80 @@
     width: auto;
   }
 }
+
+/* Keep the compact player usable when a phone is rotated manually or by the app. */
+@media (max-width: 1023px) and (orientation: landscape) {
+  main {
+    min-height: 100dvh;
+    overflow: auto;
+  }
+
+  main > header {
+    height: 3.25rem;
+    padding-inline: 1rem;
+  }
+
+  main > header > div:first-child span {
+    font-size: 0.95rem;
+  }
+
+  main > div {
+    min-height: calc(100dvh - 3.25rem);
+    grid-template-columns: minmax(8rem, 0.7fr) minmax(25rem, 2fr) minmax(8rem, 0.7fr);
+  }
+
+  main > div > aside {
+    display: block !important;
+    padding: 1rem;
+  }
+
+  main > div > section {
+    min-width: 0;
+    padding: 1rem 1.25rem;
+  }
+
+  main > div > section > div:first-child {
+    margin-bottom: 0.75rem;
+  }
+
+  main > div > section > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.8fr) minmax(15rem, 1.2fr);
+    grid-template-rows: auto auto auto auto auto;
+    align-items: center;
+    column-gap: 1.25rem;
+    row-gap: 0.45rem;
+  }
+
+  main > div > section > div:nth-child(2) > div:first-child {
+    grid-row: 1 / -1;
+    width: min(100%, 16rem);
+    max-width: none;
+    justify-self: center;
+  }
+
+  main > div > section > div:nth-child(2) > div:nth-child(2) {
+    margin-top: 0;
+    max-width: none;
+    text-align: left;
+  }
+
+  main > div > section > div:nth-child(2) > div:nth-child(n + 3) {
+    margin-top: 0.75rem;
+    max-width: none;
+  }
+
+  main > div > section > div:nth-child(2) > div:nth-child(6) {
+    padding-top: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+  main > div > section {
+    padding-inline: 1.25rem;
+  }
+
+  main > div > section > div:nth-child(2) > div:first-child {
+    max-width: min(100%, 22rem);
+  }
+}
